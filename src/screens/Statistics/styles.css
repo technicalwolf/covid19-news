@@ -1,0 +1,220 @@
+.stats {
+    height: calc(100vh - 64px);
+    width: calc(100vw - 48px);
+    padding: 32px 24px;
+    background-color: #473F97;
+}
+
+.stats > .nav {
+    display: block;
+    padding-top: 16px;
+    height: 24px;
+}
+
+.nav > .item {
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 24px 24px;
+}
+
+.item.back {
+    float: left;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABICAYAAAAJZ/BjAAAACXBIWXMAACE4AAAhOAFFljFgAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAG8SURBVHgB7dvhbcIwEIbhgwk6AiPQDegGbNBuQDeADUonKJ2AEWAD2CBsQDf4elGRioAQG2yM2veRrEjBv84kn/EJMwAAAAC4EUkjH3MfCx/PhtvwYvd8rHRsZchrV/xKzUaGPLy4Qx9bnTc3pOeFnSjMwpCWF3WqcIRxKmoO2yaEcCpqD9tDb4Y0FBa2+8aGNBQettot0tCQhuLCtvLRM1xPF4QtxU9EhG05ImzLEWFbjgjbMkTYliPCthwRtuWIsM2u0/SBF3Pql5gO1drHl6E263Q6nyETTy6Afo6G+4ZrrH0RHtsmdQ9vePFfjOKn0FdAj7t74h5dqXQGbRO6hpwe2iacWoCNIZVZ24SjEPb3Vv3+pz97vaAQbtoF1fv5Dwt4hPYsDbV6K7704r/bNcTxQ3niAO4+1N/uiEWoWIQMvKjjiEXgXCgHxZ+MTgxp6YJw9hGzm0IbxYdzJXIhPRHO5Sk+nF8NaYlwLk+Ec3kinO+DCOfyFB/OdOJSU1w4b3kSMlBcOP+7P2pn7wl7Y2LjlycLa9j0DPkE5AI5kNuZRagMt+HFHuj390IdvnMCGAAAAAAAAAAA/FXfwro/CywzaCwAAAAASUVORK5CYII=');
+    background-size: 24px 24px;
+    background-position: center;
+}
+
+.item.notification {
+    float: right;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEBSURBVHgB7ZXREYIwDIYD57tsYN3ADcomOoIb6Aa6AaMwAm4AG8AGNT3Sa/TAJorni99dDu76p/1LQwrwa5xzBcYZo3WRBqPCMPAJOMEBo3fz+LEjvINPZBPVGNbvhsYs7SCw105umPPTC92J7aQAKcxdJdDWKSNTSQ0lWYG2JG0LUsKHFWoLjV69QEqfT4jlhxUZ5nLzCbGh5w2UCyBrzQIDyAlmdpIF7FOShI6eZVLpYs9JlijLkZWqG3uPrqZjbvjzyzmBYe51vQUeelfLqyljAu/awDJ0WZZt/UsOf5YAz+dKh2fYXSG6yVYgo4exAHj5bmBJ0PGFnPeqy+Xb3AGluljJAxgI3wAAAABJRU5ErkJggg==');
+    background-size: 24px 24px;
+    background-position: center;
+}
+
+.stats > .body > h2 {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+
+.stats > .body > .switch {
+    height: 50px;
+}
+
+.stats > .body > .switch > .buttonGroup {
+    position: absolute;
+    width: calc(100% - 48px);
+    z-index: 2;
+}
+
+.stats > .body > .switch > .buttonGroup > .selection {
+    width: 40%;
+    margin-left: 4px;
+    float: left;
+    display: inline-block;
+}
+
+.stats > .body > .switch > .buttonGroup > span {
+    width: 40%;
+    margin-left: 4px;
+    float: left;
+    padding: 13px 0 13px 18px;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 15px;
+    text-align: center;
+    color: #FFFFFF;
+    font-weight: 500;
+}
+
+.stats > .body > .switch > .buttonGroup > .global {
+    width: 40%;
+    border-radius: 50px;
+    padding: 13px 18px 13px 0;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 15px;
+    text-align: center;
+    margin-right: 4px;
+    float: right;
+    transition: .1s linear font-size;
+    display: inline-block;
+    color: #FFFFFF;
+    z-index: 1;
+}
+
+.stats > .body > .switch > .buttonGroup > .global.active {
+    font-weight: 500;
+    font-size: 16px;
+    padding: 13px 18px 13px 18px;
+    background-color: #ffffff;
+    transition: .1s linear background-color, .1s linear padding;
+    color: #0D1333;
+}
+
+.stats > .body > .switch > .overlay {
+    background-color: #ffffff;
+    opacity: .2;
+    height: 50px;
+    width: calc(100% - 48px);
+    position: absolute;
+    margin-top: -4px;
+    border-radius: 50px;
+}
+
+.stats > .body > .statistic {
+    display: block;
+    margin-top: 24px;
+}
+
+.stats > .body > .statistic > .statsFilter {
+    display: block;
+    text-align: center;
+}
+
+.statsFilter > span {
+    font-weight: 600;
+    padding: 0 12px;
+    font-size: 14px;
+    line-height: 15px;
+    color: #FFFFFF;
+    opacity: 0.6;
+    transition: .2s linear opacity;
+}
+
+.statsFilter > span.active {
+    opacity: 1;
+    transition: .2s linear opacity;
+}
+
+.flexStats {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: .2s linear all;
+}
+
+.flexStats.loading {
+    opacity: .5;
+    transition: .2s linear all;
+}
+
+.flexStats > .row1 {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.flexStats > .row1 > div,
+.flexStats > .row2 > div {
+    flex: 1;
+    padding: 16px 12px 10px 12px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    justify-content: space-around;
+}
+
+.row1 {
+    order: 2;
+}
+
+.row2 {
+    order: 3
+}
+
+.row1 > .affected {
+    margin-right: 17px;
+    background-color: #FFB259;
+}
+
+
+.row1 > .death {
+    background-color: #FF5959;
+}
+
+.row2 > .recover {
+    margin-right: 10px;
+    background-color: #4CD97B;
+}
+
+.row2 > .active {
+    margin-right: 10px;
+    background-color: #4DB5FF;
+}
+
+.row2 > .serious {
+    background-color: #9059FF;
+}
+
+
+.flexStats label {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 15px;
+    color: #FFFFFF;
+}
+
+.flexStats h2 {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 26px;
+    margin: 32px 0 0 0;
+    color: #FFFFFF;
+}
+
+.flexStats > .row2 {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.flexStats > .row2 h2 {
+    font-size: 16px;
+}
